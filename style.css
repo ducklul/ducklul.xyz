@@ -14,12 +14,13 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  html, body {
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
-  }
+html, body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
 
 
   header {
