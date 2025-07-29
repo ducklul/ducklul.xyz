@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Mac window controls code ---
     const macControls = document.querySelector('.mac-window-controls');
     const closeBtn = document.querySelector('.control-btn.close');
     const maximizeBtn = document.querySelector('.control-btn.maximize');
@@ -34,22 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(window.location.href, '_blank');
     });
   
-    // --- Custom smooth scroll inertia ---
   
     let currentScroll = window.scrollY;
     let targetScroll = currentScroll;
-    const ease = 0.07; // Lower = smoother/slower easing
+    const ease = 0.07; 
   
-    // Handle wheel scroll to update target scroll position smoothly
     window.addEventListener('wheel', e => {
-      e.preventDefault(); // Prevent native scroll
+      e.preventDefault(); 
   
-      // Update target scroll, limit to scroll bounds
       targetScroll += e.deltaY;
       targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight));
     }, { passive: false });
   
-    // Animate smooth scroll toward targetScroll
     function smoothScroll() {
       currentScroll += (targetScroll - currentScroll) * ease;
       window.scrollTo(0, currentScroll);
@@ -58,9 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     smoothScroll();
   
-    // --- Smooth scroll on nav link clicks ---
   
-    const headerOffset = 80; // height of sticky header
+    const headerOffset = 80; 
     const navLinks = document.querySelectorAll('nav.nav-box a[href^="#"]');
   
     navLinks.forEach(link => {
@@ -71,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetElement = document.getElementById(targetId);
         if (!targetElement) return;
   
-        // Calculate position adjusted for header offset
         const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
         targetScroll = elementPosition - headerOffset;
       });
