@@ -538,3 +538,9 @@
   gap: 10px;
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) { 
+    .mac-window-controls {
+        display: none;
+    }
+}
