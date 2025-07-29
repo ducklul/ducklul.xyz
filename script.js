@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mac window controls
+  // Mac window controls (still functional)
   const macControls = document.querySelector('.mac-window-controls');
   const closeBtn = document.querySelector('.control-btn.close');
   const maximizeBtn = document.querySelector('.control-btn.maximize');
@@ -28,26 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(window.location.href, '_blank');
   });
 
-  // Smooth scroll for nav links with offset for sticky header
-  const headerOffset = 80;
-  const navLinks = document.querySelectorAll('nav.nav-box a[href^="#"]');
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (!targetElement) return;
-
-      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // Removed conflicting mouse wheel scroll override and duplicate anchor scroll handler
+  // All scrolling-related behavior is disabled for testing.
+  // This allows you to test native anchor scrolling via CSS alone.
 });
