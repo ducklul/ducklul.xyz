@@ -1,4 +1,3 @@
-/* Reset and base */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,6 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Navigation box */
   header {
     position: sticky;
     top: 0;
@@ -26,7 +24,6 @@
     gap: 20px;
   }
   
-  /* Nav and Mac controls container */
   .nav-box {
     margin-top: 0;
     background: rgba(255, 255, 255, 0.034);
@@ -49,7 +46,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    margin-left: 0; /* Remove margin that was pushing it */
+    margin-left: 0; 
   }
   
   .control-btn {
@@ -79,7 +76,6 @@
     box-shadow: 0 0 8px rgba(255, 140, 0, 0.8);
   }
   
-  /* Navigation links */
   .nav-box a {
     color: #ccc;
     font-size: 14px;
@@ -95,7 +91,6 @@
     text-shadow: 0 0 8px #ff8c00;
   }
   
-  /* Remove margins/padding between sections */
   .section {
     margin: 0;
     padding: 0;
@@ -119,7 +114,6 @@
     color: #eee;
   }
   
-  /* Gradient text style for ducklul */
   .gradient-text {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -137,7 +131,6 @@
     margin-bottom: 0;
   }
   
-  /* Subtitle below name */
   .subtitle {
     margin-top: 16px;
     font-size: 18px;
@@ -148,7 +141,6 @@
     text-align: center;
   }
   
-  /* Location text */
   .location {
     margin-top: 8px;
     font-size: 14px;
@@ -167,7 +159,6 @@
     color: #ffaa33;
   }
   
-  /* Sections container outline */
   .section-container {
     max-width: 900px;
     width: 100%;
@@ -179,21 +170,18 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
   
-  /* Add top border to About, Projects, Experience containers */
   #about .section-container,
   #projects .section-container,
   #experience .section-container {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
   
-  /* About section - reduced top padding */
   #about {
     margin: 0 auto;
     width: 100%;
     max-width: 900px;
   }
   
-  /* Projects section - no extra padding to stay aligned */
   #projects {
     padding: 0;
     margin: 0 auto;
@@ -201,7 +189,6 @@
     max-width: 900px;
   }
   
-  /* Experience section - no extra padding to stay aligned */
   #experience {
     padding: 0;
     margin: 0 auto;
@@ -209,7 +196,6 @@
     max-width: 900px;
   }
   
-  /* Headings */
   .section-container h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -218,7 +204,6 @@
     text-align: left;
   }
   
-  /* Paragraphs and list */
   .section-container p,
   .project-list li {
     font-size: 1rem;
@@ -236,7 +221,6 @@
     color: #eee;
   }
   
-  /* Projects grid */
   .projects-grid {
     display: flex;
     gap: 20px;
@@ -270,7 +254,7 @@
   
 .timeline {
   position: relative;
-  margin-left: 40px; /* space for timeline line and circles */
+  margin-left: 40px; 
   padding-left: 30px;
   border-left: 2px solid rgba(255, 255, 255, 0.15);
 }
@@ -288,7 +272,7 @@
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -38px;  /* changed from -53px to -9px */
+    left: -38px;  
     top: 10px;
     width: 16px;
     height: 16px;
@@ -297,8 +281,6 @@
     box-shadow: 0 0 8px rgba(255, 140, 0, 0.7);
   }
   
-
-/* Timeline detail text */
 .timeline-detail {
   color: #bbb;
   font-size: 1rem;
@@ -307,7 +289,6 @@
   margin-top: 4px;
 }
 
-/* Bold headline (learned ___) */
 .timeline-detail strong {
   color: #eee;
   display: block;
@@ -315,7 +296,6 @@
   font-weight: 700;
 }
 
-/* The year, below the strong text */
 .timeline-detail .year-text {
   display: block;
   color: #aaa;
@@ -324,7 +304,6 @@
   font-style: italic;
 }
   
-  /* Dropdown for close message */
   .close-dropdown {
     position: fixed;
     top: 15px;
@@ -372,7 +351,6 @@
     background: #ffaa33;
   }
   
-  /* Dropdown animations */
   @keyframes slideDown {
     0% {
       opacity: 0;
@@ -403,7 +381,6 @@
     animation: slideUp 0.3s ease forwards;
   }
   
-  /* Responsive */
   @media (max-width: 600px) {
     .nav-box {
       padding: 10px 20px;
@@ -527,7 +504,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: invert(1); /* makes SVG white for dark backgrounds */
+  filter: invert(1); 
 }
 
 .location-block {
