@@ -1,3 +1,4 @@
+//javascript
 document.addEventListener('DOMContentLoaded', () => {
     const macControls = document.querySelector('.mac-window-controls');
     const closeBtn = document.querySelector('.control-btn.close');
