@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentScroll = window.scrollY;
     let targetScroll = currentScroll;
-    const ease = 0.07; // Lower = smoother/slower easing
+    const ease = 0.20; // Lower = smoother/slower easing
     const scrollStep = 80; // Pixels to scroll per key press
 
     let touchStartY = 0; // To track touch start position for mobile scrolling
