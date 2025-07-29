@@ -35,14 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
   
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const macControls = document.querySelector('.mac-window-controls');
   const closeBtn = document.querySelector('.control-btn.close');
   const maximizeBtn = document.querySelector('.control-btn.maximize');
   const dropdown = document.querySelector('.close-dropdown');
   const dropdownCloseBtn = document.querySelector('.dropdown-close-btn');
 
-  // Dropdown show/hide logic
   function showDropdown() {
     macControls.style.display = 'none';
     dropdown.classList.remove('hidden', 'slide-up');
@@ -69,13 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(window.location.href, '_blank');
   });
 
-  // Smooth scroll on nav link click only
   const headerOffset = 80;
   const navLinks = document.querySelectorAll('nav.nav-box a[href^="#"]');
 
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
+
       const targetId = link.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
       if (!targetElement) return;
@@ -83,7 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
       const scrollToPosition = elementPosition - headerOffset;
 
-      window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
+
+      if ('scrollBehavior' in document.documentElement.style) {
+        window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
+      } else {
+
+        window.scrollTo(0, scrollToPosition);
+      }
     });
   });
 });
