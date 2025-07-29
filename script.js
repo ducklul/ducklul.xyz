@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Mac window controls
   const macControls = document.querySelector('.mac-window-controls');
   const closeBtn = document.querySelector('.control-btn.close');
   const maximizeBtn = document.querySelector('.control-btn.maximize');
@@ -31,25 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(window.location.href, '_blank');
   });
 
+  // Smooth scroll for nav links
   const headerOffset = 80;
   const navLinks = document.querySelectorAll('nav.nav-box a[href^="#"]');
 
   navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
+    link.addEventListener('click', event => {
+      event.preventDefault();
 
       const targetId = link.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
       if (!targetElement) return;
 
+      // Calculate position accounting for sticky header offset
       const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-      const scrollToPosition = elementPosition - headerOffset;
+      const offsetPosition = elementPosition - headerOffset;
 
-      if ('scrollBehavior' in document.documentElement.style) {
-        window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
-      } else {
-        window.scrollTo(0, scrollToPosition);
-      }
+      // Scroll smoothly using native behavior
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     });
   });
 });
