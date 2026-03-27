@@ -146,10 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const socialButtons = document.querySelectorAll('.social-btn');
     
     socialButtons.forEach(btn => {
-      btn.addEventListener('mouseenter', () => {
-        // Add a subtle bounce effect
-        btn.style.animation = 'socialBounce 0.3s ease-out';
-      });
+
       
       btn.addEventListener('animationend', () => {
         btn.style.animation = '';
