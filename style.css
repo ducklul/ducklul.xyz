@@ -146,6 +146,7 @@ h2 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); margin-bottom: clamp(1.75rem, 4vw,
   .steps li::before { left: .45rem; } .steps li::after { left: .15rem; }
   .steps li > div { padding-left: 0; }
   .hero-ground { justify-content: flex-start; }
+  .socials { display: grid; grid-template-columns: repeat(4, 46px); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
