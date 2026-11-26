@@ -92,8 +92,7 @@ h2 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); margin-bottom: clamp(1.75rem, 4vw,
 .lit::after { top: 50%; left: 0; right: 0; height: 4px; margin-top: -2px; }
 .lit-one { width: clamp(48px, 7vw, 78px); height: clamp(66px, 10vw, 108px); }
 .lit-two { width: clamp(44px, 6vw, 64px); height: clamp(44px, 6vw, 64px); }
-.about .lead { font-size: 1.3rem; line-height: 1.65; color: var(--night-800); }
-.about p { color: var(--ink); }
+.about p { font-size: 1.1rem; line-height: 1.75; max-width: 60ch; color: var(--ink); margin-bottom: 1.25em; }
 
 /* path */
 .steps { list-style: none; margin: 0; padding: 0 0 0 0; }
