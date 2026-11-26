@@ -1,238 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ducklul</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
-        rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ducklul</title>
+  <meta name="description" content="ducklul’s portfolio: backend engineer, projects, and a path through code and robotics." />
+  <meta name="theme-color" content="#1B2250" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
-<body style="opacity: 0; transition: opacity 0.5s ease-in-out;">
-    <header>
-        <nav class="nav-box">
-            <a href="#" onclick="scrollToSection('home'); return false;">Home</a>
-            <a href="#" onclick="scrollToSection('about'); return false;">About</a>
-            <a href="#" onclick="scrollToSection('projects'); return false;">Projects</a>
-            <a href="#" onclick="scrollToSection('experience'); return false;">Experience</a>
-            <a href="#" onclick="scrollToSection('contact'); return false;">Contact</a>
-        </nav>
+<body>
+  <a class="skip" href="#projects">Skip to projects</a>
 
-        <div class="mac-window-controls">
-            <button class="control-btn close" title="Close" aria-label="Close"></button>
-            <button class="control-btn minimize" title="Minimize" aria-label="Minimize"></button>
-            <button class="control-btn maximize" title="Maximize" aria-label="Maximize"></button>
-        </div>
-    </header>
-
-    <div class="close-dropdown hidden">
-        <p>Try closing the site manually</p>
-        <button class="dropdown-close-btn" aria-label="Close popup">Close</button>
+  <header class="bar">
+    <nav class="nav" aria-label="Main">
+      <a href="#home" class="nav-home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="mac-window-controls">
+      <button class="control-btn close" title="Close" aria-label="Close"></button>
+      <button class="control-btn minimize" title="Minimize" aria-label="Minimize"></button>
+      <button class="control-btn maximize" title="Maximize" aria-label="Maximize"></button>
     </div>
+  </header>
 
-    <section id="home" class="section">
-        <div class="home-intro">
-            <h1 class="gradient-text">(ducklul)</h1>
-            <p class="subtitle">Backend Engineer · Real-World Systems Thinker</p>
-            
-            <div class="location-block">
-                <p class="location">
-                    Currently in
-                    <a href="https://maps.app.goo.gl/jzTJVzGhZ3T8fJEZ9" target="_blank" rel="noopener noreferrer">United States</a>
-                </p>
+  <div class="close-dropdown hidden" role="status">
+    <p>Try closing the site manually</p>
+    <button class="dropdown-close-btn" aria-label="Close popup">Close</button>
+  </div>
 
-                <div class="social-buttons">
-                    <a href="https://youtube.com/@ducklul2505?si=fCUxirE0moer8lMX" class="social-btn" title="YouTube" target="_blank" rel="noopener noreferrer">
-                        <svg role="img" fill="#FF0000" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    </a>
-                    <a href="https://www.twitch.tv/ducklul11/" class="social-btn" title="Twitch" target="_blank" rel="noopener noreferrer">
-                        <svg role="img" fill="#9146FF" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitch</title><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
-                    </a>
-                    <a href="https://github.com/ducklul/" class="social-btn" title="GitHub" target="_blank" rel="noopener noreferrer">
-                        <svg role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                    </a>
-                    <a href="https://discord.gg/ShkKeVf3en" class="social-btn" title="Discord" target="_blank" rel="noopener noreferrer">
-                        <svg role="img" fill="#5865F2" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@ducklul" class="social-btn" title="TikTok" target="_blank" rel="noopener noreferrer">
-                        <svg role="img" fill="#ffffff" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                    </a>
-                    <a href="https://x.com/ducklul" class="social-btn" title="X" target="_blank" rel="noopener noreferrer">
-                        <svg role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
-                    </a>
-                    <a href="https://open.spotify.com/user/owdjl5mo34enbulhwk2e0xgzb?si=e00403393a5243a0" class="social-btn" title="Spotify" target="_blank" rel="noopener noreferrer">
-                        <svg role="img" fill="#1ED760" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spotify</title><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-                    </a>
-                    <a href="https://steamcommunity.com/id/ducklul1/" class="social-btn" title="Steam" target="_blank" rel="noopener noreferrer">
-                        <svg role="img" fill="#171FC9" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Steam</title><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
+  <main>
+    <section id="home" class="hero">
+      <div class="scene" aria-hidden="true">
+  <div class="layer l-sky"></div>
+  <svg class="layer l-stars" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" fill="#F8FBFF"><circle cx="169" cy="111" r="1" opacity="0.7"/><circle cx="534" cy="101" r="0.8" opacity="0.7"/><circle cx="1105" cy="28" r="1" opacity="0.5"/><circle cx="567" cy="187" r="1" opacity="0.7"/><circle cx="1443" cy="124" r="0.8" opacity="0.7"/><circle cx="1489" cy="208" r="1" opacity="0.7"/><circle cx="938" cy="110" r="0.8" opacity="0.7"/><circle cx="1136" cy="301" r="1.2" opacity="0.7"/><circle cx="678" cy="114" r="0.8" opacity="0.9"/><circle cx="1324" cy="73" r="1" opacity="0.5"/><circle cx="809" cy="54" r="1.2" opacity="0.9"/><circle cx="666" cy="144" r="0.8" opacity="0.7"/><circle cx="1043" cy="52" r="0.8" opacity="0.7"/><circle cx="710" cy="291" r="1.6" opacity="0.7"/><circle cx="1008" cy="24" r="1" opacity="0.5"/><circle cx="888" cy="27" r="1" opacity="0.9"/><circle cx="696" cy="81" r="1.6" opacity="0.5"/><circle cx="1067" cy="275" r="1.6" opacity="0.7"/><circle cx="1195" cy="54" r="1" opacity="0.7"/><circle cx="1088" cy="296" r="1.2" opacity="0.9"/><circle cx="1160" cy="94" r="1.2" opacity="0.7"/><circle cx="1384" cy="205" r="1" opacity="0.7"/><circle cx="299" cy="288" r="1.2" opacity="0.9"/><circle cx="1029" cy="112" r="1.6" opacity="0.9"/><circle cx="244" cy="267" r="0.8" opacity="0.9"/><circle cx="782" cy="24" r="0.8" opacity="0.9"/><circle cx="830" cy="288" r="0.8" opacity="0.7"/><circle cx="200" cy="95" r="0.8" opacity="0.9"/><circle cx="949" cy="221" r="1.6" opacity="0.7"/><circle cx="514" cy="252" r="1.6" opacity="0.5"/><circle cx="705" cy="232" r="1.6" opacity="0.9"/><circle cx="659" cy="65" r="1" opacity="0.7"/><circle cx="1275" cy="25" r="1.2" opacity="0.5"/><circle cx="1447" cy="21" r="0.8" opacity="0.5"/><circle cx="328" cy="126" r="0.8" opacity="0.9"/><circle cx="591" cy="174" r="1.2" opacity="0.5"/><circle cx="1279" cy="265" r="0.8" opacity="0.7"/><circle cx="1506" cy="308" r="0.8" opacity="0.9"/><circle cx="1286" cy="138" r="1" opacity="0.9"/><circle cx="1096" cy="233" r="0.8" opacity="0.7"/><circle cx="1306" cy="221" r="1" opacity="0.9"/><circle cx="428" cy="283" r="1" opacity="0.9"/><circle cx="452" cy="287" r="1" opacity="0.5"/><circle cx="1527" cy="187" r="1" opacity="0.7"/><circle cx="1245" cy="171" r="1" opacity="0.5"/><circle cx="408" cy="59" r="1" opacity="0.5"/><circle cx="281" cy="55" r="1.2" opacity="0.7"/><circle cx="208" cy="232" r="1.6" opacity="0.9"/><circle cx="1453" cy="74" r="1" opacity="0.7"/><circle cx="1296" cy="19" r="0.8" opacity="0.5"/><circle cx="1177" cy="193" r="1.2" opacity="0.5"/><circle cx="1453" cy="268" r="1.2" opacity="0.9"/><circle cx="1414" cy="106" r="0.8" opacity="0.7"/><circle cx="227" cy="22" r="0.8" opacity="0.9"/><circle cx="1266" cy="273" r="1.6" opacity="0.5"/><circle cx="398" cy="104" r="0.8" opacity="0.5"/><circle cx="363" cy="90" r="1.2" opacity="0.9"/><circle cx="205" cy="306" r="0.8" opacity="0.5"/><circle cx="1404" cy="246" r="0.8" opacity="0.5"/><circle cx="679" cy="210" r="1.6" opacity="0.7"/><circle cx="1065" cy="191" r="1.6" opacity="0.5"/><circle cx="1240" cy="201" r="0.8" opacity="0.9"/><circle cx="1445" cy="30" r="1" opacity="0.5"/><circle cx="845" cy="242" r="1.2" opacity="0.9"/><circle cx="768" cy="217" r="1" opacity="0.9"/><circle cx="348" cy="58" r="0.8" opacity="0.7"/><circle cx="183" cy="217" r="1" opacity="0.9"/><circle cx="1207" cy="184" r="1.2" opacity="0.7"/><circle cx="248" cy="91" r="1.6" opacity="0.5"/><circle cx="685" cy="285" r="1.2" opacity="0.7"/></svg>
+  <svg class="layer l-moon" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+    <defs><radialGradient id="mg"><stop offset="0" stop-color="#FFF4DA" stop-opacity=".55"/><stop offset="1" stop-color="#FFF4DA" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="1240" cy="190" r="190" fill="url(#mg)"/><circle cx="1240" cy="190" r="58" fill="#FFF6E3"/>
+    <circle cx="1222" cy="176" r="9" fill="#F0DFC0" opacity=".7"/><circle cx="1260" cy="208" r="6" fill="#F0DFC0" opacity=".6"/>
+  </svg>
+  <svg class="layer l-far" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><defs><linearGradient id="rg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A9AD8"/><stop offset="1" stop-color="#5A6CB8"/></linearGradient></defs><path d="M0 560 L120 500 L220 540 L360 440 L470 520 L600 470 L720 540 L880 430 L1010 510 L1140 460 L1280 530 L1420 450 L1600 540 L1600 900 L0 900Z" fill="url(#rg)" opacity=".85"/></svg>
+  <svg class="layer l-mid" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><defs><filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="7"/></filter></defs><rect x="-20" y="559" width="88" height="401" fill="#2F3A86"/>
+<polygon points="-26,559 24,519 74,559" fill="#2F3A86"/>
+<polygon points="-26,559 24,519 74,559 69,565 24,528 -21,565" fill="#EAF3FC"/>
+<rect x="87" y="552" width="100" height="408" fill="#2F3A86"/>
+<polygon points="81,552 137,521 193,552" fill="#2F3A86"/>
+<polygon points="81,552 137,521 193,552 188,558 137,530 86,558" fill="#EAF3FC"/>
+<rect x="203" y="552" width="88" height="408" fill="#2F3A86"/>
+<polygon points="197,552 247,506 297,552" fill="#2F3A86"/>
+<polygon points="197,552 247,506 297,552 292,558 247,515 202,558" fill="#EAF3FC"/>
+<rect x="295" y="571" width="109" height="389" fill="#2F3A86"/>
+<polygon points="289,571 350,535 410,571" fill="#2F3A86"/>
+<polygon points="289,571 350,535 410,571 405,577 350,544 294,577" fill="#EAF3FC"/>
+<rect x="422" y="595" width="101" height="365" fill="#2F3A86"/>
+<polygon points="416,595 472,556 529,595" fill="#2F3A86"/>
+<polygon points="416,595 472,556 529,595 524,601 472,565 421,601" fill="#EAF3FC"/>
+<rect x="537" y="601" width="108" height="359" fill="#2F3A86"/>
+<polygon points="531,601 591,559 651,601" fill="#2F3A86"/>
+<polygon points="531,601 591,559 651,601 646,607 591,568 536,607" fill="#EAF3FC"/>
+<rect x="661" y="593" width="66" height="367" fill="#2F3A86"/>
+<polygon points="655,593 694,555 733,593" fill="#2F3A86"/>
+<polygon points="655,593 694,555 733,593 728,599 694,564 660,599" fill="#EAF3FC"/>
+<rect x="731" y="604" width="73" height="356" fill="#2F3A86"/>
+<polygon points="725,604 768,577 810,604" fill="#2F3A86"/>
+<polygon points="725,604 768,577 810,604 805,610 768,586 730,610" fill="#EAF3FC"/>
+<rect x="820" y="621" width="86" height="339" fill="#2F3A86"/>
+<polygon points="814,621 863,577 912,621" fill="#2F3A86"/>
+<polygon points="814,621 863,577 912,621 907,627 863,586 819,627" fill="#EAF3FC"/>
+<rect x="918" y="619" width="81" height="341" fill="#2F3A86"/>
+<polygon points="912,619 958,584 1005,619" fill="#2F3A86"/>
+<polygon points="912,619 958,584 1005,619 1000,625 958,593 917,625" fill="#EAF3FC"/>
+<rect x="1006" y="599" width="68" height="361" fill="#2F3A86"/>
+<polygon points="1000,599 1040,570 1080,599" fill="#2F3A86"/>
+<polygon points="1000,599 1040,570 1080,599 1075,605 1040,579 1005,605" fill="#EAF3FC"/>
+<rect x="1093" y="559" width="71" height="401" fill="#2F3A86"/>
+<polygon points="1087,559 1128,527 1170,559" fill="#2F3A86"/>
+<polygon points="1087,559 1128,527 1170,559 1165,565 1128,536 1092,565" fill="#EAF3FC"/>
+<rect x="1172" y="581" width="86" height="379" fill="#2F3A86"/>
+<polygon points="1166,581 1215,552 1264,581" fill="#2F3A86"/>
+<polygon points="1166,581 1215,552 1264,581 1259,587 1215,561 1171,587" fill="#EAF3FC"/>
+<rect x="1280" y="628" width="79" height="332" fill="#2F3A86"/>
+<polygon points="1274,628 1320,596 1365,628" fill="#2F3A86"/>
+<polygon points="1274,628 1320,596 1365,628 1360,634 1320,605 1279,634" fill="#EAF3FC"/>
+<rect x="1381" y="625" width="66" height="335" fill="#2F3A86"/>
+<polygon points="1375,625 1414,595 1453,625" fill="#2F3A86"/>
+<polygon points="1375,625 1414,595 1453,625 1448,631 1414,604 1380,631" fill="#EAF3FC"/>
+<rect x="1459" y="552" width="60" height="408" fill="#2F3A86"/>
+<polygon points="1453,552 1489,516 1525,552" fill="#2F3A86"/>
+<polygon points="1453,552 1489,516 1525,552 1520,558 1489,525 1458,558" fill="#EAF3FC"/>
+<rect x="1529" y="599" width="97" height="361" fill="#2F3A86"/>
+<polygon points="1523,599 1578,573 1632,599" fill="#2F3A86"/>
+<polygon points="1523,599 1578,573 1632,599 1627,605 1578,582 1528,605" fill="#EAF3FC"/><g fill="#FFB45E" filter="url(#glow)" opacity=".75"><rect x="20" y="573" width="14" height="20" rx="2"/><rect x="97" y="566" width="14" height="20" rx="2"/><rect x="97" y="650" width="14" height="20" rx="2"/><rect x="127" y="650" width="14" height="20" rx="2"/><rect x="213" y="566" width="14" height="20" rx="2"/><rect x="213" y="608" width="14" height="20" rx="2"/><rect x="243" y="566" width="14" height="20" rx="2"/><rect x="243" y="608" width="14" height="20" rx="2"/><rect x="243" y="650" width="14" height="20" rx="2"/><rect x="577" y="615" width="14" height="20" rx="2"/><rect x="671" y="607" width="14" height="20" rx="2"/><rect x="671" y="649" width="14" height="20" rx="2"/><rect x="1016" y="613" width="14" height="20" rx="2"/><rect x="1103" y="615" width="14" height="20" rx="2"/><rect x="1212" y="595" width="14" height="20" rx="2"/><rect x="1290" y="642" width="14" height="20" rx="2"/><rect x="1391" y="639" width="14" height="20" rx="2"/><rect x="1469" y="650" width="14" height="20" rx="2"/></g><g fill="#FFC98A"><rect x="20" y="573" width="14" height="20" rx="2"/><rect x="97" y="566" width="14" height="20" rx="2"/><rect x="97" y="650" width="14" height="20" rx="2"/><rect x="127" y="650" width="14" height="20" rx="2"/><rect x="213" y="566" width="14" height="20" rx="2"/><rect x="213" y="608" width="14" height="20" rx="2"/><rect x="243" y="566" width="14" height="20" rx="2"/><rect x="243" y="608" width="14" height="20" rx="2"/><rect x="243" y="650" width="14" height="20" rx="2"/><rect x="577" y="615" width="14" height="20" rx="2"/><rect x="671" y="607" width="14" height="20" rx="2"/><rect x="671" y="649" width="14" height="20" rx="2"/><rect x="1016" y="613" width="14" height="20" rx="2"/><rect x="1103" y="615" width="14" height="20" rx="2"/><rect x="1212" y="595" width="14" height="20" rx="2"/><rect x="1290" y="642" width="14" height="20" rx="2"/><rect x="1391" y="639" width="14" height="20" rx="2"/><rect x="1469" y="650" width="14" height="20" rx="2"/></g></svg>
+  <svg class="layer l-near" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><rect x="-30" y="597" width="143" height="443" fill="#1B2250"/>
+<polygon points="-36,597 42,567 119,597" fill="#1B2250"/>
+<polygon points="-36,597 42,567 119,597 114,603 42,576 -31,603" fill="#EAF3FC"/>
+<rect x="119" y="664" width="116" height="376" fill="#1B2250"/>
+<polygon points="113,664 177,635 241,664" fill="#1B2250"/>
+<polygon points="113,664 177,635 241,664 236,670 177,644 118,670" fill="#EAF3FC"/>
+<rect x="254" y="604" width="108" height="436" fill="#1B2250"/>
+<polygon points="248,604 308,573 368,604" fill="#1B2250"/>
+<polygon points="248,604 308,573 368,604 363,610 308,582 253,610" fill="#EAF3FC"/>
+<rect x="366" y="636" width="94" height="404" fill="#1B2250"/>
+<polygon points="360,636 413,597 466,636" fill="#1B2250"/>
+<polygon points="360,636 413,597 466,636 461,642 413,606 365,642" fill="#EAF3FC"/>
+<rect x="475" y="613" width="98" height="427" fill="#1B2250"/>
+<polygon points="469,613 524,577 579,613" fill="#1B2250"/>
+<polygon points="469,613 524,577 579,613 574,619 524,586 474,619" fill="#EAF3FC"/>
+<rect x="588" y="631" width="134" height="409" fill="#1B2250"/>
+<polygon points="582,631 655,604 728,631" fill="#1B2250"/>
+<polygon points="582,631 655,604 728,631 723,637 655,613 587,637" fill="#EAF3FC"/>
+<rect x="736" y="660" width="112" height="380" fill="#1B2250"/>
+<polygon points="730,660 792,619 854,660" fill="#1B2250"/>
+<polygon points="730,660 792,619 854,660 849,666 792,628 735,666" fill="#EAF3FC"/>
+<rect x="864" y="596" width="114" height="444" fill="#1B2250"/>
+<polygon points="858,596 921,570 984,596" fill="#1B2250"/>
+<polygon points="858,596 921,570 984,596 979,602 921,579 863,602" fill="#EAF3FC"/>
+<rect x="998" y="631" width="91" height="409" fill="#1B2250"/>
+<polygon points="992,631 1044,586 1095,631" fill="#1B2250"/>
+<polygon points="992,631 1044,586 1095,631 1090,637 1044,595 997,637" fill="#EAF3FC"/>
+<rect x="1108" y="669" width="106" height="371" fill="#1B2250"/>
+<polygon points="1102,669 1161,632 1220,669" fill="#1B2250"/>
+<polygon points="1102,669 1161,632 1220,669 1215,675 1161,641 1107,675" fill="#EAF3FC"/>
+<rect x="1232" y="640" width="121" height="400" fill="#1B2250"/>
+<polygon points="1226,640 1292,604 1359,640" fill="#1B2250"/>
+<polygon points="1226,640 1292,604 1359,640 1354,646 1292,613 1231,646" fill="#EAF3FC"/>
+<rect x="1363" y="642" width="114" height="398" fill="#1B2250"/>
+<polygon points="1357,642 1420,598 1483,642" fill="#1B2250"/>
+<polygon points="1357,642 1420,598 1483,642 1478,648 1420,607 1362,648" fill="#EAF3FC"/>
+<rect x="1483" y="635" width="150" height="405" fill="#1B2250"/>
+<polygon points="1477,635 1558,604 1639,635" fill="#1B2250"/>
+<polygon points="1477,635 1558,604 1639,635 1634,641 1558,613 1482,641" fill="#EAF3FC"/>
+<rect x="1645" y="593" width="145" height="447" fill="#1B2250"/>
+<polygon points="1639,593 1718,566 1796,593" fill="#1B2250"/>
+<polygon points="1639,593 1718,566 1796,593 1791,599 1718,575 1644,599" fill="#EAF3FC"/><g fill="#FFB45E" filter="url(#glow)" opacity=".8"><rect x="-20" y="653" width="16" height="22" rx="2"/><rect x="-20" y="695" width="16" height="22" rx="2"/><rect x="10" y="695" width="16" height="22" rx="2"/><rect x="40" y="611" width="16" height="22" rx="2"/><rect x="70" y="611" width="16" height="22" rx="2"/><rect x="129" y="678" width="16" height="22" rx="2"/><rect x="159" y="678" width="16" height="22" rx="2"/><rect x="189" y="678" width="16" height="22" rx="2"/><rect x="264" y="702" width="16" height="22" rx="2"/><rect x="324" y="618" width="16" height="22" rx="2"/><rect x="324" y="660" width="16" height="22" rx="2"/><rect x="376" y="692" width="16" height="22" rx="2"/><rect x="376" y="734" width="16" height="22" rx="2"/><rect x="406" y="650" width="16" height="22" rx="2"/><rect x="406" y="734" width="16" height="22" rx="2"/><rect x="515" y="627" width="16" height="22" rx="2"/><rect x="515" y="669" width="16" height="22" rx="2"/><rect x="515" y="711" width="16" height="22" rx="2"/><rect x="598" y="645" width="16" height="22" rx="2"/><rect x="628" y="687" width="16" height="22" rx="2"/><rect x="658" y="645" width="16" height="22" rx="2"/><rect x="776" y="674" width="16" height="22" rx="2"/><rect x="874" y="652" width="16" height="22" rx="2"/><rect x="904" y="694" width="16" height="22" rx="2"/><rect x="934" y="736" width="16" height="22" rx="2"/><rect x="1008" y="645" width="16" height="22" rx="2"/><rect x="1008" y="687" width="16" height="22" rx="2"/><rect x="1038" y="645" width="16" height="22" rx="2"/><rect x="1118" y="683" width="16" height="22" rx="2"/><rect x="1148" y="683" width="16" height="22" rx="2"/><rect x="1148" y="725" width="16" height="22" rx="2"/><rect x="1242" y="654" width="16" height="22" rx="2"/><rect x="1242" y="696" width="16" height="22" rx="2"/><rect x="1302" y="696" width="16" height="22" rx="2"/><rect x="1373" y="698" width="16" height="22" rx="2"/><rect x="1403" y="656" width="16" height="22" rx="2"/><rect x="1403" y="698" width="16" height="22" rx="2"/><rect x="1433" y="698" width="16" height="22" rx="2"/><rect x="1493" y="649" width="16" height="22" rx="2"/><rect x="1523" y="691" width="16" height="22" rx="2"/><rect x="1583" y="691" width="16" height="22" rx="2"/><rect x="1655" y="649" width="16" height="22" rx="2"/><rect x="1655" y="691" width="16" height="22" rx="2"/><rect x="1685" y="691" width="16" height="22" rx="2"/><rect x="1685" y="733" width="16" height="22" rx="2"/><rect x="1715" y="649" width="16" height="22" rx="2"/><rect x="1745" y="649" width="16" height="22" rx="2"/><rect x="1745" y="691" width="16" height="22" rx="2"/></g><g fill="#FFC98A"><rect x="-20" y="653" width="16" height="22" rx="2"/><rect x="-20" y="695" width="16" height="22" rx="2"/><rect x="10" y="695" width="16" height="22" rx="2"/><rect x="40" y="611" width="16" height="22" rx="2"/><rect x="70" y="611" width="16" height="22" rx="2"/><rect x="129" y="678" width="16" height="22" rx="2"/><rect x="159" y="678" width="16" height="22" rx="2"/><rect x="189" y="678" width="16" height="22" rx="2"/><rect x="264" y="702" width="16" height="22" rx="2"/><rect x="324" y="618" width="16" height="22" rx="2"/><rect x="324" y="660" width="16" height="22" rx="2"/><rect x="376" y="692" width="16" height="22" rx="2"/><rect x="376" y="734" width="16" height="22" rx="2"/><rect x="406" y="650" width="16" height="22" rx="2"/><rect x="406" y="734" width="16" height="22" rx="2"/><rect x="515" y="627" width="16" height="22" rx="2"/><rect x="515" y="669" width="16" height="22" rx="2"/><rect x="515" y="711" width="16" height="22" rx="2"/><rect x="598" y="645" width="16" height="22" rx="2"/><rect x="628" y="687" width="16" height="22" rx="2"/><rect x="658" y="645" width="16" height="22" rx="2"/><rect x="776" y="674" width="16" height="22" rx="2"/><rect x="874" y="652" width="16" height="22" rx="2"/><rect x="904" y="694" width="16" height="22" rx="2"/><rect x="934" y="736" width="16" height="22" rx="2"/><rect x="1008" y="645" width="16" height="22" rx="2"/><rect x="1008" y="687" width="16" height="22" rx="2"/><rect x="1038" y="645" width="16" height="22" rx="2"/><rect x="1118" y="683" width="16" height="22" rx="2"/><rect x="1148" y="683" width="16" height="22" rx="2"/><rect x="1148" y="725" width="16" height="22" rx="2"/><rect x="1242" y="654" width="16" height="22" rx="2"/><rect x="1242" y="696" width="16" height="22" rx="2"/><rect x="1302" y="696" width="16" height="22" rx="2"/><rect x="1373" y="698" width="16" height="22" rx="2"/><rect x="1403" y="656" width="16" height="22" rx="2"/><rect x="1403" y="698" width="16" height="22" rx="2"/><rect x="1433" y="698" width="16" height="22" rx="2"/><rect x="1493" y="649" width="16" height="22" rx="2"/><rect x="1523" y="691" width="16" height="22" rx="2"/><rect x="1583" y="691" width="16" height="22" rx="2"/><rect x="1655" y="649" width="16" height="22" rx="2"/><rect x="1655" y="691" width="16" height="22" rx="2"/><rect x="1685" y="691" width="16" height="22" rx="2"/><rect x="1685" y="733" width="16" height="22" rx="2"/><rect x="1715" y="649" width="16" height="22" rx="2"/><rect x="1745" y="649" width="16" height="22" rx="2"/><rect x="1745" y="691" width="16" height="22" rx="2"/></g><rect x="56" y="780" width="8" height="30" fill="#141B47"/>
+<polygon points="19,800 60,717 101,800" fill="#141B47"/>
+<polygon points="39,754 60,717 81,754 70,760 60,746 50,760" fill="#EAF3FC"/>
+<polygon points="27,844 60,771 93,844" fill="#141B47"/>
+<polygon points="43,804 60,771 77,804 68,809 60,796 52,809" fill="#EAF3FC"/>
+<polygon points="36,884 60,820 84,884" fill="#141B47"/>
+<polygon points="48,849 60,820 72,849 66,853 60,842 54,853" fill="#EAF3FC"/>
+<rect x="146" y="780" width="8" height="30" fill="#141B47"/>
+<polygon points="115,800 150,730 185,800" fill="#141B47"/>
+<polygon points="132,761 150,730 168,761 159,766 150,754 141,766" fill="#EAF3FC"/>
+<polygon points="122,844 150,782 178,844" fill="#141B47"/>
+<polygon points="136,810 150,782 164,810 157,814 150,804 143,814" fill="#EAF3FC"/>
+<polygon points="130,884 150,830 170,884" fill="#141B47"/>
+<polygon points="140,854 150,830 160,854 155,858 150,849 145,858" fill="#EAF3FC"/>
+<rect x="1446" y="780" width="8" height="30" fill="#141B47"/>
+<polygon points="1409,800 1450,719 1491,800" fill="#141B47"/>
+<polygon points="1430,755 1450,719 1470,755 1460,761 1450,747 1440,761" fill="#EAF3FC"/>
+<polygon points="1417,844 1450,772 1483,844" fill="#141B47"/>
+<polygon points="1434,804 1450,772 1466,804 1458,809 1450,797 1442,809" fill="#EAF3FC"/>
+<polygon points="1427,884 1450,821 1473,884" fill="#141B47"/>
+<polygon points="1438,850 1450,821 1462,850 1456,854 1450,843 1444,854" fill="#EAF3FC"/>
+<rect x="1536" y="780" width="8" height="30" fill="#141B47"/>
+<polygon points="1511,800 1540,742 1569,800" fill="#141B47"/>
+<polygon points="1525,768 1540,742 1555,768 1547,772 1540,762 1533,772" fill="#EAF3FC"/>
+<polygon points="1517,844 1540,792 1563,844" fill="#141B47"/>
+<polygon points="1528,816 1540,792 1552,816 1546,819 1540,810 1534,819" fill="#EAF3FC"/>
+<polygon points="1523,884 1540,839 1557,884" fill="#141B47"/>
+<polygon points="1532,859 1540,839 1548,859 1544,862 1540,855 1536,862" fill="#EAF3FC"/>
+<rect x="816" y="780" width="8" height="30" fill="#141B47"/>
+<polygon points="786,800 820,732 854,800" fill="#141B47"/>
+<polygon points="803,763 820,732 837,763 828,767 820,756 812,767" fill="#EAF3FC"/>
+<polygon points="793,844 820,784 847,844" fill="#141B47"/>
+<polygon points="806,811 820,784 834,811 827,815 820,805 813,815" fill="#EAF3FC"/>
+<polygon points="801,884 820,832 839,884" fill="#141B47"/>
+<polygon points="810,855 820,832 830,855 825,859 820,850 815,859" fill="#EAF3FC"/>
+<rect x="1006" y="780" width="8" height="30" fill="#141B47"/>
+<polygon points="974,800 1010,728 1046,800" fill="#141B47"/>
+<polygon points="992,760 1010,728 1028,760 1019,765 1010,753 1001,765" fill="#EAF3FC"/>
+<polygon points="981,844 1010,780 1039,844" fill="#141B47"/>
+<polygon points="996,809 1010,780 1024,809 1017,813 1010,802 1003,813" fill="#EAF3FC"/>
+<polygon points="989,884 1010,828 1031,884" fill="#141B47"/>
+<polygon points="1000,853 1010,828 1020,853 1015,857 1010,848 1005,857" fill="#EAF3FC"/>
+    <rect x="1176" y="610" width="7" height="200" fill="#0F1640"/><rect x="1166" y="600" width="27" height="16" rx="3" fill="#0F1640"/>
+    <defs><radialGradient id="lg"><stop offset="0" stop-color="#FFB45E" stop-opacity=".75"/><stop offset="1" stop-color="#FFB45E" stop-opacity="0"/></radialGradient></defs><circle cx="1179" cy="620" r="130" fill="url(#lg)"/><rect x="1170" y="605" width="19" height="9" rx="2" fill="#FFE3B0"/></svg>
+  <canvas class="snow" data-snow></canvas>
+</div>
+      <div class="hero-copy">
+        <h1>ducklul</h1>
+        <p class="role">Backend engineer and real-world systems thinker.</p>
+        <a class="btn btn-snow" href="#projects">See projects</a>
+      </div>
+      <div class="hero-ground">
+        <svg class="drift" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70 L0 38 C180 8 340 6 520 30 C720 56 900 8 1100 14 C1260 18 1360 40 1440 24 L1440 70Z"/></svg>
+        <ul class="socials" aria-label="Find me elsewhere">
+          <li><a href="https://youtube.com/@ducklul2505?si=fCUxirE0moer8lMX" class="social" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+          <li><a href="https://www.twitch.tv/ducklul11/" class="social" target="_blank" rel="noopener noreferrer" aria-label="Twitch" title="Twitch"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg></a></li>
+          <li><a href="https://github.com/ducklul/" class="social" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+          <li><a href="https://discord.gg/ShkKeVf3en" class="social" target="_blank" rel="noopener noreferrer" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg></a></li>
+          <li><a href="https://www.tiktok.com/@ducklul" class="social" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a></li>
+          <li><a href="https://x.com/ducklul" class="social" target="_blank" rel="noopener noreferrer" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></li>
+          <li><a href="https://open.spotify.com/user/owdjl5mo34enbulhwk2e0xgzb?si=e00403393a5243a0" class="social" target="_blank" rel="noopener noreferrer" aria-label="Spotify" title="Spotify"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></li>
+          <li><a href="https://steamcommunity.com/id/ducklul1/" class="social" target="_blank" rel="noopener noreferrer" aria-label="Steam" title="Steam"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg></a></li>
+        </ul>
+        <p class="where">Currently in <a href="https://maps.app.goo.gl/jzTJVzGhZ3T8fJEZ9" target="_blank" rel="noopener noreferrer">United States</a></p>
+      </div>
     </section>
 
-    <section id="about" class="section">
-        <div class="section-container">
-<h1>About me</h1>
-            <p>
-                Hey, I'm duck! I am interested in programming and have been developing for around 6 years now, mostly working on backend development. I honestly enjoy building and designing programs that work well and is clean, easy to keep up, and designed in a way that actually makes sense.
-            </p>
-
-            <p>
-                I am comfortable working on backend systems and applications that keep everything running well behind the scenes. That is what I am passionate about, but I am willing to learn new things!
-            </p>
-
-            <p>
-                I enjoy technology and love pretty much everything about it, but when I am not coding, I like to play video games, play guitar and ukulele, and mess around with robotics. I am constantly trying to keep up with new technology and am always open to talking about tech related topics!
-            </p>
-
-            <p>
-                I always strive to keep learning and put in my best effort towards that. Personally, the best work gets done when I keep improving till it feels just right.
-            </p>
+    <section id="projects" class="snow-sec">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <div class="boards">
+          <article class="board board-a">
+            <div class="lit lit-one" aria-hidden="true"></div>
+            <h3>ducklul.xyz</h3>
+            <p>My personal website where I showcase my work, projects, and thoughts about technology and coding.</p>
+            <a class="btn btn-lamp" href="https://ducklul.xyz" target="_blank" rel="noopener noreferrer">Visit ducklul.xyz</a>
+          </article>
+          <article class="board board-b">
+            <div class="lit lit-two" aria-hidden="true"></div>
+            <h3>Duck United Bot</h3>
+            <p>A custom Discord bot built for moderation, utilities, and community engagement.</p>
+            <a class="btn btn-lamp" href="https://discord.gg/ShkKeVf3en" target="_blank" rel="noopener noreferrer">Join the Discord</a>
+          </article>
         </div>
+      </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="section-container">
-            <h1>My Projects</h1>
-            <div class="projects-grid">
-                <div class="project-box">
-                    <a href="https://ducklul.xyz" target="_blank" rel="noopener noreferrer" class="project-link">
-                        ducklul.xyz
-                    </a>
-                    <p>
-                        My personal website where I showcase my work, projects, and thoughts about
-                        technology and coding.
-                    </p>
-                </div>
-                <div class="project-box">
-                    <a href="https://discord.gg/ShkKeVf3en" target="_blank" rel="noopener noreferrer" class="project-link">
-                        Duck United Bot
-                    </a>
-                    <p>
-                        A custom Discord bot built for moderation, utilities, and community engagement.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <section id="about" class="snow-sec about">
+      <div class="wrap narrow">
+        <h2>About me</h2>
+        <p class="lead">Hey, I’m duck! I am interested in programming and have been developing for around 6 years now, mostly working on backend development. I honestly enjoy building and designing programs that work well and is clean, easy to keep up, and designed in a way that actually makes sense.</p>
+        <p>I am comfortable working on backend systems and applications that keep everything running well behind the scenes. That is what I am passionate about, but I am willing to learn new things!</p>
+        <p>I enjoy technology and love pretty much everything about it, but when I am not coding, I like to play video games, play guitar and ukulele, and mess around with robotics. I am constantly trying to keep up with new technology and am always open to talking about tech related topics!</p>
+        <p>I always strive to keep learning and put in my best effort towards that. Personally, the best work gets done when I keep improving till it feels just right.</p>
+      </div>
     </section>
 
-    <section id="experience" class="section">
-        <div class="section-container">
-            <h1>Personal Experience</h1>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">2026</div>
-                    <div class="timeline-detail">
-                        <strong>Learning Robotics & C++</strong>
-                    <div class="desc">
-                        <span class="dash">-</span>
-                        <span class="text">
-                        Developing skills in control systems and hardware integration to build real-world robotics applications.
-                        </span> 
-                        </div>         
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-detail">
-                        <strong>Working on becoming a full-stack developer</strong>
-                    <div class="desc">
-                        <span class="dash">-</span>
-                        <span class="text">
-                        Combining backend and frontend skills to build full applications.
-                        </span> 
-                        </div>         
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2023</div>
-                    <div class="timeline-detail">
-                        <strong>Learned HTML, CSS, JavaScript</strong>
-                    <div class="desc">
-                        <span class="dash">-</span>
-                        <span class="text">
-                        To broaden my abilities to the frontend.
-                        </span> 
-                        </div>         
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2022</div>
-                    <div class="timeline-detail">
-                        <strong>Learned Java</strong>
-                    <div class="desc">
-                        <span class="dash">-</span>
-                        <span class="text">
-                        Expanding my skill set to strongly typed languages and object-oriented programming.
-                        </span> 
-                        </div>         
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">2020</div>
-                    <div class="timeline-detail">
-                        <strong>Learned Python</strong>
-                    <div class="desc">
-                        <span class="dash">-</span>
-                        <span class="text">
-                        I began my coding journey with Python, focusing on basic programming concepts.
-                        </span> 
-                        </div>         
-                    </div>
-                </div>
-        </div>
+    <section id="experience" class="snow-sec trail">
+      <div class="wrap narrow">
+        <h2>Personal experience</h2>
+        <ol class="steps">
+          <li class="now"><span class="yr">2026</span><div><h3>Learning Robotics &amp; C++</h3><p>Developing skills in control systems and hardware integration to build real-world robotics applications.</p></div></li>
+          <li><span class="yr">2025</span><div><h3>Working on becoming a full-stack developer</h3><p>Combining backend and frontend skills to build full applications.</p></div></li>
+          <li><span class="yr">2023</span><div><h3>Learned HTML, CSS, JavaScript</h3><p>To broaden my abilities to the frontend.</p></div></li>
+          <li><span class="yr">2022</span><div><h3>Learned Java</h3><p>Expanding my skill set to strongly typed languages and object-oriented programming.</p></div></li>
+          <li><span class="yr">2020</span><div><h3>Learned Python</h3><p>I began my coding journey with Python, focusing on basic programming concepts.</p></div></li>
+        </ol>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="section-container">
-            <h1>Contact Me</h1>
-            <p>Want to collaborate, ask a question, or just say hi? Drop me a message below:</p>
-
-            <form class="contact-form" action="https://formspree.io/f/mqalbgvy" method="POST">
-      
-            <div class="form-row">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-            </div>
-
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
-            <button type="submit" class="send-btn">
-                Send Message
-            </button>
-
-            </form>
-        </div>
+    <section id="contact" class="night">
+      <svg class="drift drift-top" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 L0 30 C200 62 380 60 560 38 C760 14 940 62 1120 52 C1280 44 1380 24 1440 40 L1440 0Z"/></svg>
+      <canvas class="snow" data-snow></canvas>
+      <div class="wrap narrow">
+        <h2>Contact me</h2>
+        <p class="lead-s">Want to collaborate, ask a question, or just say hi? Drop me a message below:</p>
+        <form class="contact-form" action="https://formspree.io/f/mqalbgvy" method="POST">
+          <div class="row">
+            <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          </div>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button type="submit" class="btn btn-lamp">Send message</button>
+        </form>
+      </div>
+      <footer class="site-footer"><p>© 2026 ducklul – All Rights Reserved.</p></footer>
     </section>
-
-    <footer class="site-footer">
-        <p>© 2026 ducklul – All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function scrollToSection(id) {
-            const el = document.getElementById(id);
-            if (el) {
-                el.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    </script>
-
-    <script src="script.js"></script>
+  </main>
 </body>
 </html>
